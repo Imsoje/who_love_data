@@ -1,0 +1,11 @@
+from selenium import webdriver
+from bs4 import BeautifulSoup
+driver = webdriver.Chrome("./chromedriver")
+
+url = 'https://tumblbug.com/discover'
+driver.get(url)
+
+html = driver.page_source
+
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(html, 'html.parser')
